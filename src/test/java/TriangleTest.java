@@ -10,14 +10,14 @@ import static org.junit.Assert.assertEquals;
 public class TriangleTest {
 
     Triangle triangle;
-    PrintStream console = null;          // 声明（为null）：输出流 (字符设备) console
-    ByteArrayOutputStream bytes = null;  // 声明（为null）：bytes 用于缓存console 重定向过来的字符流
+    PrintStream console = null;
+    ByteArrayOutputStream bytes = null;
 
     @Before
     public void initial(){
         triangle = new Triangle();
-        bytes = new ByteArrayOutputStream();    // 分配空间
-        console = System.out;                   // 获取System.out 输出流的句柄
+        bytes = new ByteArrayOutputStream();
+        console = System.out;
         System.setOut(new PrintStream(bytes));
     }
 
